@@ -1,0 +1,18 @@
+services:
+  app:
+    image: mcr.microsoft.com/devcontainers/base:trixie
+    command: sleep infinity
+    networks:
+    - learning-rabbitmq-network
+
+  rabbitmq:
+    image: rabbitmq:4.2.4
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    networks:
+    - learning-rabbitmq-network
+
+networks:
+  learning-rabbitmq-network:
+    driver: bridge
