@@ -3,7 +3,6 @@
     "dockerComposeFile": "docker-compose.yml",
     "service": "app",
     "workspaceFolder": "/workspace",
-    /*"remoteUser": "vscode",*/
     "mounts": [
         "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
         "source=${localWorkspaceFolder}/.local/repository,target=/home/vscode/.m2/repository,type=bind,consistency=cached"
